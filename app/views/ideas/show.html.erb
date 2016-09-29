@@ -1,0 +1,18 @@
+
+<p>
+  <strong>Name:</strong>
+  <%= @idea.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @idea.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
+</p>
+
+<%= link_to '<i class="material-icons left">edit</i> Edit'.html_safe, edit_idea_path(@idea), :class => 'waves-effect waves-light btn' %> 
+<%= link_to '<i class="material-icons left">arrow_back</i> Back'.html_safe, ideas_path, :class=> 'waves-effect waves-light btn' %>

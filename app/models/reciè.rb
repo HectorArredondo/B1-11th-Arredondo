@@ -1,0 +1,2 @@
+class Reciè < ApplicationRecord
+end

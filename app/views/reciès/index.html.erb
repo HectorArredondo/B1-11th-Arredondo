@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reciès</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Ingredients</th>
+      <th>Preparation</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reciès.each do |reciè| %>
+      <tr>
+        <td><%= reciè.name %></td>
+        <td><%= reciè.ingredients %></td>
+        <td><%= reciè.preparation %></td>
+        <td><%= reciè.image %></td>
+        <td><%= link_to 'Show', reciè %></td>
+        <td><%= link_to 'Edit', edit_reciè_path(reciè) %></td>
+        <td><%= link_to 'Destroy', reciè, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reciè', new_reciè_path %>

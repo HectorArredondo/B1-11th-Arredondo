@@ -1,0 +1,1 @@
+json.array! @reciès, partial: 'reciès/reciè', as: :reciè
